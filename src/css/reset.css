@@ -1,34 +1,92 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+	box-shadow: none;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+p,
+b,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+	display: block;
+}
+
 p {
-  margin: 0;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+	margin: 0;
 }
 
 a {
-  color: currentColor;
-  text-decoration: none;
+	display: inline-block;
+	text-decoration: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
 }
 
 button {
-  cursor: pointer;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+ul li {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+	display: block;
+	max-width: 100%;
 }
