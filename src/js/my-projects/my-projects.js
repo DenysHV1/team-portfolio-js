@@ -1,14 +1,54 @@
-//? ця функція не приймає ніяких аргументів і вона потрібна для того щоб ніхто не чепав main.js 
-//? функція потрібна як обгортка для всієї логіки
-//? вся логіка знаходиться всередині
-//? ви маєте папку (для своїх JS файлів) в ній, при необхідності, можете створювати інші JS файли (залежно від завдання) і виклик тих функцій повинен бути в основній функції, тобто вы можете написати всередині цієї функції безліч інших функцій, або їх виклики
-//? якщо все зрозуміло, то можете видалити ці повідомлення
+import { projectsRefs } from './project-refs';
+import { contentArr } from './content-arr';
+import sprite from '../../img/sprite.svg';
 
-//your imports is here (if you have)
+console.log(sprite)
 
-//
+export function myProjects() {
+  const { projectsListEl, showMoreBtnEl } = projectsRefs;
+  let num = 3;
 
-export function myProjects () {
-	console.log('hello world from myProjects');
-	// your code is here ⏬'
+  const projectsMarkup = (projects, items) => {
+    return projects
+      .map(({ img1x, img2x, title, technologies,btnLink, id }, _, arr) =>
+        id <= items && arr.length > 0
+          ? `
+<li class="project-item">
+  <a class="project-link" width='1112px' height = '640px' href="${img2x}">
+    <picture class="project-img">
+      <source
+        srcset="
+          ${img1x} 1x,
+          ${img2x} 2x
+        "/>
+      <img src="${img1x}" alt="${title}" />
+    </picture>
+  </a>
+  	  <p class="project_technologies">${technologies}</p>
+	  <div class="project-name-btn-container">
+	  	  <h3 class="project_name">${title}</h3>
+	  <a class="project-btn" href="${btnLink}">VISIT <span><svg width="24" height="24"><use href="${sprite}#projects-arrow"></use></svg></span></a>
+	  </div>
+</li>`
+          : ''
+      )
+      .join('');
+  };
+  projectsListEl.insertAdjacentHTML(
+    'beforeend',
+    projectsMarkup(contentArr, num)
+  );
+
+  const onClick = () => {
+    num += 3;
+    projectsListEl.innerHTML = '';
+    projectsListEl.insertAdjacentHTML(
+      'beforeend',
+      projectsMarkup(contentArr, num)
+    );
+    if (projectsListEl.children.length >= contentArr.length) {
+      showMoreBtnEl.classList.add('visually-hidden');
+    }
+  };
+  showMoreBtnEl.addEventListener('click', onClick);
 }
