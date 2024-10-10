@@ -127,20 +127,19 @@
 
 .buttons {
     display: flex;
-    /* Use flexbox for the button container */
+
     justify-content: flex-end;
-    /* Align buttons to the right */
+  
     gap: 16px;
-    /* Add space between the buttons */
+
     width: 100%;
-    /* Use full width of the container */
+
     max-width: 116px;
-    /* Adjust max width if necessary */
     position: absolute;
-    /* Positioning at the bottom */
-    bottom: 24px;
+
+    bottom: 56px;
     right: 0;
-    /* Align to the right */
+
 }
 
  
@@ -173,5 +172,9 @@
 
     .swiper-wrapper{
         max-height: 288px;
+    }
+
+    .buttons{
+        bottom: 20px;
     }
 }
