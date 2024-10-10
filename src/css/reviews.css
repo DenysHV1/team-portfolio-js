@@ -1,0 +1,170 @@
+.reviews-title {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.23077;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #292929;
+    font-family: var(--second-family);
+    text-align: center;
+}
+
+
+
+
+.list-reviews {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 40px;
+    min-width: 0;
+}
+
+.reviews-container {
+    --new-family: "Poppins-Light", sans-serif;
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Impact", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+.section.reviews {
+    margin: 0 auto;
+}
+
+
+
+.review-text {
+    height: 168px;
+    font-weight: 300;
+    font-family: var(--new-family);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
+overflow: hidden;
+
+display: flex;
+flex-direction: column;
+
+align-items: start;
+    /* Скрывает переполняющий текст */
+
+    /* Запрещает перенос строк */
+    text-overflow: ellipsis;
+    /* Добавляет многоточие */
+
+  
+}
+
+.review-img {
+    border-radius: 24px;
+    width: 40px;
+    height: 40px;
+}
+
+.review-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #292929;
+}
+
+.swiper-wrapper{
+    min-width: 0;
+ 
+}
+
+
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+margin-bottom: 100px;
+    border-radius: 16px;
+    padding: 32px;
+max-width: 320px;
+   min-height: 296px;
+   max-height: 296px;
+    background: #e4e5e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Тень для создания глубины */
+    transition: transform 0.2s;
+    /* Плавное увеличение */
+}
+
+@media (min-width: 768px) {
+    .review-text{
+      max-height: 96px;
+    }
+
+    .list-item{
+        min-width: 704px;
+        min-height: 224px;
+    }
+}
+
+.list-item:hover {
+    transform: translateY(-5px);
+    /* Эффект при наведении */
+}
+
+.name-and-img {
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    /* Центрирование кнопок */
+    margin-top: 20px;
+    /* Отступ между элементами списка и кнопками */
+    margin-bottom: 40px;
+    /* Отступ снизу, если нужно */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: inline-flex;
+    align-items: center;
+    /* Выравнивание по центру */
+    justify-content: center;
+    /* Центрирование содержимого */
+    gap: 10px;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    min-width: 40px;
+    max-height: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #292929;
+    /* Цвет фона при наведении */
+    color: #fff;
+    /* Цвет текста при наведении */
+}
+
+.button.disabled {
+    border: 1px solid #E4E5E6;
+    cursor: default;
+    opacity: 0.5;
+    /* Визуальная индикация состояния отключено */
+}
