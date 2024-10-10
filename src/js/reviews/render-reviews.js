@@ -2,7 +2,7 @@ export default function createMarkup(arr = []) {
   return arr
     .map(
       item =>
-        `<li class="swiper-slide list-item">
+        `<li class="list-item swiper-slide">
           <p class="review-text">${item.review}</p>
           <div class="name-and-img">
             <img src="${item.avatar_url}" alt="" class="review-img" />

@@ -1,6 +1,6 @@
 .reviews-title {
-    margin-top: 50px;
-    margin-bottom: 40px;
+
+      margin-bottom: 40px;
     font-weight: 400;
     font-size: 52px;
     line-height: 1.23077;
@@ -9,17 +9,7 @@
     color: #292929;
     font-family: var(--second-family);
     text-align: center;
-}
-
-
-
-
-.list-reviews {
-    display: flex;
-    flex-direction: row;
-
-    margin-bottom: 40px;
-    min-width: 0;
+      margin-top: 0;
 }
 
 .reviews-container {
@@ -28,10 +18,14 @@
     --second-family: "Impact", sans-serif;
     --third-family: "Montserrat", sans-serif;
     position: relative;
+    padding-bottom: 80px;
+  
 }
 
 .section.reviews {
     margin: 0 auto;
+    height: 700px;
+    padding-top: 80px;
 }
 
 
@@ -44,19 +38,11 @@
     line-height: 1.5;
     letter-spacing: 0.03em;
     color: #292929;
-overflow: hidden;
-
-display: flex;
-flex-direction: column;
-
-align-items: start;
-    /* Скрывает переполняющий текст */
-
-    /* Запрещает перенос строк */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     text-overflow: ellipsis;
-    /* Добавляет многоточие */
-
-  
 }
 
 .review-img {
@@ -73,10 +59,7 @@ align-items: start;
     color: #292929;
 }
 
-.swiper-wrapper{
-    min-width: 0;
- 
-}
+
 
 
 
@@ -85,34 +68,18 @@ align-items: start;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-margin-bottom: 100px;
+    margin-bottom: 100px;
     border-radius: 16px;
     padding: 32px;
-max-width: 320px;
+    max-width: 320px;
    min-height: 296px;
    max-height: 296px;
     background: #e4e5e6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Тень для создания глубины */
-    transition: transform 0.2s;
-    /* Плавное увеличение */
+   
 }
 
-@media (min-width: 768px) {
-    .review-text{
-      max-height: 96px;
-    }
 
-    .list-item{
-        min-width: 704px;
-        min-height: 224px;
-    }
-}
 
-.list-item:hover {
-    transform: translateY(-5px);
-    /* Эффект при наведении */
-}
 
 .name-and-img {
  
@@ -126,45 +93,85 @@ max-width: 320px;
 
 
 
-
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    /* Центрирование кнопок */
-    margin-top: 20px;
-    /* Отступ между элементами списка и кнопками */
-    margin-bottom: 40px;
-    /* Отступ снизу, если нужно */
-}
-
 .swiper-button-next,
 .swiper-button-prev {
-    display: inline-flex;
-    align-items: center;
-    /* Выравнивание по центру */
-    justify-content: center;
-    /* Центрирование содержимого */
-    gap: 10px;
+    display: flex;  
+     --swiper-theme-color: #000;
+    --swiper-navigation-size: 40px;
+
+   
     border: 1px solid #292929;
     border-radius: 8px;
     padding: 12px;
     cursor: pointer;
-    min-width: 40px;
-    max-height: 40px;
+     min-width: 40px;
+    max-height: 40px; 
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.button:hover {
+
+.button:hover:not(.button.disabled) {
     background-color: #292929;
-    /* Цвет фона при наведении */
     color: #fff;
-    /* Цвет текста при наведении */
+  
 }
 
 .button.disabled {
     border: 1px solid #E4E5E6;
     cursor: default;
     opacity: 0.5;
-    /* Визуальная индикация состояния отключено */
+    
+}
+
+
+
+.buttons {
+    display: flex;
+    /* Use flexbox for the button container */
+    justify-content: flex-end;
+    /* Align buttons to the right */
+    gap: 16px;
+    /* Add space between the buttons */
+    width: 100%;
+    /* Use full width of the container */
+    max-width: 116px;
+    /* Adjust max width if necessary */
+    position: absolute;
+    /* Positioning at the bottom */
+    bottom: 24px;
+    right: 0;
+    /* Align to the right */
+}
+
+ 
+@media (min-width: 768px) {
+    .review-text{
+      max-height: 96px;
+    }
+
+    .list-item{
+        min-width: 704px;
+        min-height: 224px;
+    }
+
+    .reviews-title{
+        font-size: 108px;
+            line-height: 1.14815;
+            letter-spacing: 0.02em;
+            margin-bottom: 60px;
+    }
+
+    .reviews-container{
+        max-width: 768px;
+
+    }
+
+    .section.reviews{
+        max-height: calc(472px + 124px);
+        padding-top: 124px;
+    }
+
+    .swiper-wrapper{
+        max-height: 288px;
+    }
 }
