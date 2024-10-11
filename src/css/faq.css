@@ -1,11 +1,20 @@
-p {
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+} */
+
+/* p {
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
   color: var(--black);
-}
+} */
 
 li {
     border-bottom: 1px solid #e0e0e0;
@@ -61,11 +70,12 @@ li {
 }
 
 .accordion-title {
+  font-family: 'Poppins-regular' sans-serif;
   font-weight: 400;
-font-size: 20px;
-line-height: 160%;
-letter-spacing: 0.03em;
-text-transform: uppercase;
+  font-size: 20px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .accordion-header .accordion-title {
@@ -93,11 +103,13 @@ text-transform: uppercase;
 }
 
 .accordion-text {
-  font-family: "Poppins", sans-serif;;
-  font-weight: 300;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: 0.03em;
+  font-family:"Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .accordion-item.expanded .accordion-header {
@@ -109,10 +121,10 @@ letter-spacing: 0.03em;
   display: block;
 }
 
-.accordion-item.expanded .accordion-icon use {
+/* .accordion-item.expanded .accordion-icon use {
   href: "sprite.svg#arrow-up";
 }
 
 .accordion-item:not(.expanded) .accordion-icon use {
   href: "sprite.svg#arrow-down";
-}
+} */
