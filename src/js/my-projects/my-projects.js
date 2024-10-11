@@ -1,8 +1,7 @@
 import { projectsRefs } from './project-refs';
 import { contentArr } from './content-arr';
+import { projectsGallery } from './gallery';
 import sprite from '../../img/sprite.svg';
-
-console.log(sprite)
 
 export function myProjects() {
   const { projectsListEl, showMoreBtnEl } = projectsRefs;
@@ -10,7 +9,7 @@ export function myProjects() {
 
   const projectsMarkup = (projects, items) => {
     return projects
-      .map(({ img1x, img2x, title, technologies,btnLink, id }, _, arr) =>
+      .map(({ img1x, img2x, title, technologies, btnLink, id }, _, arr) =>
         id <= items && arr.length > 0
           ? `
 <li class="project-item">
@@ -21,7 +20,7 @@ export function myProjects() {
           ${img1x} 1x,
           ${img2x} 2x
         "/>
-      <img src="${img1x}" alt="${title}" />
+      <img class="project-img-inner" src="${img1x}" alt="${title}" />
     </picture>
   </a>
   	  <p class="project_technologies">${technologies}</p>
@@ -34,21 +33,39 @@ export function myProjects() {
       )
       .join('');
   };
+
   projectsListEl.insertAdjacentHTML(
     'beforeend',
     projectsMarkup(contentArr, num)
   );
+  projectsGallery();
 
+  const btnSpan = showMoreBtnEl.querySelector('span');
   const onClick = () => {
-    num += 3;
-    projectsListEl.innerHTML = '';
-    projectsListEl.insertAdjacentHTML(
-      'beforeend',
-      projectsMarkup(contentArr, num)
-    );
-    if (projectsListEl.children.length >= contentArr.length) {
-      showMoreBtnEl.classList.add('visually-hidden');
+    btnSpan.textContent = 'LOAD MORE';
+    if (projectsListEl.children.length < contentArr.length) {
+      num += 3;
+      projectsListEl.innerHTML = '';
+      projectsListEl.insertAdjacentHTML(
+        'beforeend',
+        projectsMarkup(contentArr, num)
+      );
+      if (projectsListEl.children.length >= contentArr.length) {
+        btnSpan.textContent = 'hide';
+      }
+    } else {
+      num = 3;
+      projectsListEl.innerHTML = '';
+      projectsListEl.insertAdjacentHTML(
+        'beforeend',
+        projectsMarkup(contentArr, num)
+      );
+      window.scrollTo({
+        top: '#my-projects',
+        behavior: 'smooth',
+      });
     }
+    projectsGallery();
   };
   showMoreBtnEl.addEventListener('click', onClick);
 }
