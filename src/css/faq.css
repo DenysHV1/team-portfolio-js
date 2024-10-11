@@ -1,9 +1,10 @@
 p {
-    font-family: "Poppins", sans-serif;;
-    font-weight: 300;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: 0.03em;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--black);
 }
 
 li {
@@ -11,12 +12,12 @@ li {
     margin-bottom: 10px;
   }
 
-  span {
+  /* span {
     font-weight: 300;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: 0.03em;
-  }
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  } */
 
 .faq__title {
     font-family: 'Impact';
@@ -26,6 +27,7 @@ letter-spacing: 0.03em;
     text-transform: uppercase;
     line-height: 123%;
     height: 192px;
+    margin-bottom: 40px;
 }
 
 .faq__title span {
@@ -33,40 +35,84 @@ letter-spacing: 0.03em;
 }
 
 
-  
-  .faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background: #f8f8f8; /* Початковий фон */
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Додаємо плавну зміну фону */
-  }
-  
-  .faq-question.active {
-    background: #c6e5e5; /* Змінюємо фон при активному стані */
-  }
-  
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: #c6e5e5; /* Той же колір фону для відповіді */
-    padding: 0 15px;
-  }
-  
-  .faq-answer.show {
-    max-height: 150px; /* Налаштуйте на відповідну висоту */
-  }
-  
-  .faq-toggle .faq-icon {
-    transition: transform 0.3s ease;
-  }
-  
-  .faq-toggle.active .faq-icon {
-    transform: rotate(180deg); /* Поворот іконки при розкритті */
-  }
-  
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 320px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+  border-radius: 16px;
+  overflow: hidden; /* Щоб контент не виходив за межі заголовку при відкритті */
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between; /* Вирівнюємо текст і іконку по різні сторони */
+  align-items: center;
+  padding: 28px 24px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-title {
+  font-weight: 400;
+font-size: 20px;
+line-height: 160%;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+
+.accordion-header .accordion-title {
+  margin: 0;
+  flex-grow: 1; /* Забезпечуємо тексту максимальну ширину */
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 16px; /* Відстань між текстом і іконкою */
+  transition: transform 0.3s ease; /* Анімація для зміни положення іконки */
+}
+
+.accordion-item.expanded .accordion-icon {
+  transform: rotate(180deg); /* Повертаємо іконку на 180 градусів при розгортанні */
+}
+
+.accordion-content {
+  display: none;
+  padding: 0px 24px 24px 28px;
+  background-color: #bcdfd1; /* Фон відкритого контенту такий самий як заголовок */
+  border-radius: 0 0 16px 16px; /* Закруглюємо лише нижні кути, щоб створити цілісність */
+  transition: background-color 0.3s ease;
+}
+
+.accordion-text {
+  font-family: "Poppins", sans-serif;;
+  font-weight: 300;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.03em;
+}
+
+.accordion-item.expanded .accordion-header {
+  background-color: #bcdfd1; /* Колір заголовка при відкритті */
+  border-radius: 16px 16px 0 0; /* Закруглюємо тільки верхні кути */
+}
+
+.accordion-item.expanded .accordion-content {
+  display: block;
+}
+
+.accordion-item.expanded .accordion-icon use {
+  href: "sprite.svg#arrow-up";
+}
+
+.accordion-item:not(.expanded) .accordion-icon use {
+  href: "sprite.svg#arrow-down";
+}
