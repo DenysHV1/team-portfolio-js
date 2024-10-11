@@ -1,15 +1,15 @@
 import axios from 'axios';
 
 export default async function getReview() {
-  const BASE_URL = 'https://portfolio-js.b.goit.study/api';
-  const END_POINT = '/reviews';
+   const BASE_URL = 'https://portfolio-js.b.goit.study/api';
+   const END_POINT = '/reviews';
 
-  try {
-    const response = await axios.get(`${BASE_URL}${END_POINT}`);
-    console.log(response.data);
-    return response.data;
+    try {
+      const response = await axios.get(`${BASE_URL}${END_POINT}`);
+      console.log(response.data);
+      return response.data;
   } catch (error) {
-    console.error(error);
-    return null;
-  }
+     console.error(error);
+      return null;
+   }
 }
