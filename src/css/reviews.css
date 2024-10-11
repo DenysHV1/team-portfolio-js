@@ -3,7 +3,7 @@
     --font-family: "Poppins", sans-serif;
     --second-family: "Impact", sans-serif;
     --third-family: "Montserrat", sans-serif;
-  
+
 }
 
 .reviews-title {
@@ -88,7 +88,7 @@
 }
 .swiper-button-next,
 .swiper-button-prev {
-    --swiper-theme-color: transparent;
+    /* --swiper-theme-color: black; */
     --swiper-navigation-size: 40px;
     cursor: pointer;
     display: inline;
@@ -99,8 +99,23 @@
     border-radius: 8px;
     transition: background-color 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275), color 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 10;
+    background-color: white;
+        background-position: center;
+        background-size: 20px;
+        background-repeat: no-repeat;
 }
 
+.swiper-button-next::after,
+ .swiper-button-prev::after {
+display: none; }
+
+  .swiper-button-prev {
+      background-image: url("../js/reviews/arrows/arrow-left.svg");
+  }
+
+  .swiper-button-next {
+      background-image: url("../js/reviews/arrows/arrow-right.svg");
+  }
 
 
 .button:hover:not(.button.disabled) {
@@ -115,12 +130,12 @@
 }
 
 .swiper-wrapper {
-    
+
     max-height: 364px;
 }
 
 .buttons {
-   
+
     gap: 24px;
     min-width: 116px;
     position: absolute;
@@ -197,13 +212,13 @@
         padding-top: 40px;
     }
 
-   
+
 
     .buttons {
     width: 100%;
     max-width: 140px;
     bottom: 28px;
-     
+
     }
 
     .swiper-button-prev,
@@ -216,16 +231,4 @@
     }
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    display: none;
-}
-
-.icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 2px;
-    stroke: black;
-    fill: black;
-}
+ 

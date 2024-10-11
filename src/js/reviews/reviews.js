@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
         spaceBetween: 32,
      
       }
-    }
+    },
+    
   });
 });
 
@@ -104,4 +105,5 @@ export async function reviews() {
     reviewsList.innerHTML = '<p class="notFound">Not found</p>';
   }
 }
+
 
