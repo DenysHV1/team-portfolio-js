@@ -54,12 +54,12 @@ li {
 .accordion-item {
   border-bottom: 1px solid #ccc;
   border-radius: 16px;
-  overflow: hidden; /* Щоб контент не виходив за межі заголовку при відкритті */
+  overflow: hidden; 
 }
 
 .accordion-header {
   display: flex;
-  justify-content: space-between; /* Вирівнюємо текст і іконку по різні сторони */
+  justify-content: space-between; 
   align-items: center;
   padding: 28px 24px;
   background-color: #f1f1f1;
@@ -80,25 +80,25 @@ li {
 
 .accordion-header .accordion-title {
   margin: 0;
-  flex-grow: 1; /* Забезпечуємо тексту максимальну ширину */
+  flex-grow: 1; 
 }
 
 .accordion-icon {
   width: 24px;
   height: 24px;
-  margin-left: 16px; /* Відстань між текстом і іконкою */
-  transition: transform 0.3s ease; /* Анімація для зміни положення іконки */
+  margin-left: 16px;
+  transition: transform 0.3s ease; 
 }
 
 .accordion-item.expanded .accordion-icon {
-  transform: rotate(180deg); /* Повертаємо іконку на 180 градусів при розгортанні */
+  transform: rotate(180deg); 
 }
 
 .accordion-content {
   display: none;
   padding: 0px 24px 24px 28px;
-  background-color: #bcdfd1; /* Фон відкритого контенту такий самий як заголовок */
-  border-radius: 0 0 16px 16px; /* Закруглюємо лише нижні кути, щоб створити цілісність */
+  background-color: #bcdfd1; 
+  border-radius: 0 0 16px 16px; 
   transition: background-color 0.3s ease;
 }
 
@@ -113,18 +113,10 @@ li {
 }
 
 .accordion-item.expanded .accordion-header {
-  background-color: #bcdfd1; /* Колір заголовка при відкритті */
-  border-radius: 16px 16px 0 0; /* Закруглюємо тільки верхні кути */
+  background-color: #bcdfd1; 
+  border-radius: 16px 16px 0 0; 
 }
 
 .accordion-item.expanded .accordion-content {
   display: block;
 }
-
-/* .accordion-item.expanded .accordion-icon use {
-  href: "sprite.svg#arrow-up";
-}
-
-.accordion-item:not(.expanded) .accordion-icon use {
-  href: "sprite.svg#arrow-down";
-} */

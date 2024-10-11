@@ -16,15 +16,15 @@ export function faq() {
         if (currentlyExpanded && currentlyExpanded !== this.parentElement) {
           currentlyExpanded.classList.remove('expanded');
           const icon = currentlyExpanded.querySelector('.accordion-icon use');
-          icon.setAttribute('href', 'sprite.svg#faq-arrow-bottom'); // Закриваємо стрілкою вниз
+          icon.setAttribute('href', 'sprite.svg#faq-arrow-bottom'); 
         }
     
         this.parentElement.classList.toggle('expanded');
         const currentIcon = this.querySelector('.accordion-icon use');
         if (this.parentElement.classList.contains('expanded')) {
-          currentIcon.setAttribute('href', 'sprite.svg#faq-arrow-top'); // Відкриваємо стрілкою вгору
+          currentIcon.setAttribute('href', 'sprite.svg#faq-arrow-top'); 
         } else {
-          currentIcon.setAttribute('href', 'sprite.svg#faq-arrow-bottom'); // Закриваємо стрілкою вниз
+          currentIcon.setAttribute('href', 'sprite.svg#faq-arrow-bottom');
         }
       });
     });
