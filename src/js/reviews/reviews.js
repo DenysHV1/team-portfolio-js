@@ -1,14 +1,100 @@
-//? ця функція не приймає ніяких аргументів і вона потрібна для того щоб ніхто не чепав main.js 
-//? функція потрібна як обгортка для всієї логіки
-//? вся логіка знаходиться всередині
-//? ви маєте папку (для своїх JS файлів) в ній, при необхідності, можете створювати інші JS файли (залежно від завдання) і виклик тих функцій повинен бути в основній функції, тобто вы можете написати всередині цієї функції безліч інших функцій, або їх виклики
-//? якщо все зрозуміло, то можете видалити ці повідомлення
+import Swiper from 'swiper';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
 
-//your imports is here (if you have)
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
-//
+import getReview from './api-reviews';
+import createMarkup from './render-reviews';
 
-export function reviews () {
-	console.log('hello world from reviews');
-	// your code is here ⏬'
+const reviewsList = document.querySelector('.list-reviews');
+
+let swiper;
+
+document.addEventListener('DOMContentLoaded', () => {
+  swiper = new Swiper('.swiper', {
+    modules: [Navigation, Keyboard, Mousewheel],
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      disabledClass: 'disabled',
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    keyboard: {
+      enabled: true,
+    },
+    mousewheel: {
+      enabled: true,
+      sensitivity: 2,
+    },
+    speed: 350,
+
+    breakpoints: {
+      1280: {
+        slidesPerView: 'auto',
+        spaceBetween: 32,
+      },
+    },
+  });
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Tab') {
+    event.preventDefault();
+
+    const activeIndex = swiper.activeIndex;
+    const isShiftPressed = event.shiftKey;
+
+    if (isShiftPressed) {
+      swiper.slideTo(
+        activeIndex > 0 ? activeIndex - 1 : swiper.slides.length - 1
+      );
+    } else {
+      swiper.slideTo(
+        activeIndex < swiper.slides.length - 1 ? activeIndex + 1 : 0
+      );
+    }
+  }
+});
+
+export async function reviews() {
+  console.log('Loading reviews...');
+
+  try {
+    const response = await getReview();
+
+    if (response) {
+      reviewsList.innerHTML = createMarkup(response);
+
+      swiper.update();
+    } else {
+      iziToast.error({
+        title: 'Error',
+        message: 'No reviews found',
+        position: 'topRight',
+        timeout: 5000,
+        backgroundColor: '#FF4D4D',
+        color: '#FFFFFF',
+        zindex: 9999,
+      });
+
+      reviewsList.innerHTML = '<p class="notFound">Not found</p>';
+    }
+  } catch (error) {
+    console.error(error);
+
+    iziToast.error({
+      title: 'Error',
+      message: 'No reviews found',
+      position: 'topRight',
+      timeout: 5000,
+      backgroundColor: '#FF4D4D',
+      color: '#FFFFFF',
+      zindex: 9999,
+    });
+
+    reviewsList.innerHTML = '<p class="notFound">Not found</p>';
+  }
 }
