@@ -20,7 +20,7 @@
 
 .reviews-container {
   max-height: 464px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .section-reviews {
