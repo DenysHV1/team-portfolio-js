@@ -17,6 +17,8 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.7.7",
+    "izitoast": "^1.4.0",
     "simplelightbox": "^2.14.3",
     "swiper": "^11.1.14",
     "vite-plugin-full-reload": "^1.2.0",
