@@ -145,7 +145,7 @@
   .second_marquee__line {
     text-align: center;
   }
-}
+
 
 @media screen and (min-width: 1440px) {
   .tech-dot-hidden {
