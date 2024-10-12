@@ -70,12 +70,13 @@ li {
 }
 
 .accordion-title {
-  font-family: 'Poppins-regular' sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 156%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: #292929;
 }
 
 .accordion-header .accordion-title {
