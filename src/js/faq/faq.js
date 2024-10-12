@@ -10,21 +10,40 @@
 
 export function faq() {
     console.log('hello world from faq');
-    document.querySelectorAll('.accordion-header').forEach(item => {
-      item.addEventListener('click', function() {
-        const currentlyExpanded = document.querySelector('.accordion-item.expanded');
-        if (currentlyExpanded && currentlyExpanded !== this.parentElement) {
-          currentlyExpanded.classList.remove('expanded');
-          const icon = currentlyExpanded.querySelector('.accordion-icon use');
-          icon.setAttribute('href', 'sprite.svg#faq-arrow-bottom'); 
-        }
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    // Открываем первый элемент по умолчанию при загрузке страницы
+    const firstItem = accordionItems[0];
+    if (firstItem) {
+      firstItem.classList.add('expanded');
+      firstItem.querySelector('.accordion-content').style.maxHeight = firstItem.querySelector('.accordion-content').scrollHeight + 'px';
+    }
     
-        this.parentElement.classList.toggle('expanded');
-        const currentIcon = this.querySelector('.accordion-icon use');
-        if (this.parentElement.classList.contains('expanded')) {
-          currentIcon.setAttribute('href', 'sprite.svg#faq-arrow-top'); 
+    // Перебираем все элементы аккордеона
+    accordionItems.forEach(item => {
+      const content = item.querySelector('.accordion-content');
+      const toggleButton = item.querySelector('.accordion-toggle');
+    
+      if (!content || !toggleButton) {
+        console.error('Не удалось найти один из элементов: content или toggleButton');
+        return;
+      }
+    
+      // Перемещаем обработчик события на кнопку
+      toggleButton.addEventListener('click', () => {
+        if (item.classList.contains('expanded')) {
+          // Закрыть элемент
+          item.classList.remove('expanded');
+          content.style.maxHeight = '0';
         } else {
-          currentIcon.setAttribute('href', 'sprite.svg#faq-arrow-bottom');
+          // Закрыть все элементы
+          accordionItems.forEach(i => {
+            i.classList.remove('expanded');
+            i.querySelector('.accordion-content').style.maxHeight = '0';
+          });
+          // Открыть текущий элемент
+          item.classList.add('expanded');
+          content.style.maxHeight = content.scrollHeight + 'px';
         }
       });
     });

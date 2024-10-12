@@ -28,7 +28,7 @@ li {
   letter-spacing: 0.03em;
   } */
 
-.faq__title {
+  .faq__title {
     font-family: 'Impact';
     font-weight: 400;
     font-size: 52px;
@@ -37,87 +37,100 @@ li {
     line-height: 123%;
     height: 192px;
     margin-bottom: 40px;
-}
-
-.faq__title span {
+  }
+  
+  .faq__title span {
     color: #00B068;
-}
+  }
+  
+  .accordion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 24px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: black;
+  }
+  
+  /* .accordion-toggle {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .accordion-toggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../img/sprite.svg#faq-arrow-up') no-repeat center center;
+    background-size: contain;
+  }
+  
+  .accordion-item.expanded .accordion-toggle::before {
+    background-image: url('/img/sprite.svg#faq-arrow-up');
+  } */
+  
+  .accordion-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
 
+  .accordion-item.expanded .accordion-icon {
+    transform: rotate(180deg);
+  }
+  
+  .accordion-content {
+    display: none;
 
-.accordion {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 320px;
-}
+    background-color: #bcdfd1;
+    border-radius: 0 0 16px 16px;
+  }
 
-.accordion-item {
-  border-bottom: 1px solid #ccc;
-  border-radius: 16px;
-  overflow: hidden; 
-}
-
-.accordion-header {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
-  padding: 28px 24px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.accordion-title {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 156%;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #292929;
-}
-
-.accordion-header .accordion-title {
-  margin: 0;
-  flex-grow: 1; 
-}
-
-.accordion-icon {
-  width: 24px;
-  height: 24px;
-  margin-left: 16px;
-  transition: transform 0.3s ease; 
-}
-
-.accordion-item.expanded .accordion-icon {
-  transform: rotate(180deg); 
-}
-
-.accordion-content {
-  display: none;
-  padding: 0px 24px 24px 28px;
-  background-color: #bcdfd1; 
-  border-radius: 0 0 16px 16px; 
-  transition: background-color 0.3s ease;
-}
-
-.accordion-text {
-  font-family:"Poppins", sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  text-transform: none;
-  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-.accordion-item.expanded .accordion-header {
-  background-color: #bcdfd1; 
-  border-radius: 16px 16px 0 0; 
-}
-
-.accordion-item.expanded .accordion-content {
-  display: block;
-}
+  .accordion-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #292929;
+    padding: 0 24px 24px 28px;
+  }
+  
+  .accordion-item.expanded .accordion-content {
+    display: block;
+  }
+  
+  .accordion-item.expanded .accordion-header {
+    background-color: #bcdfd1;
+    color: #00B068;
+  }
