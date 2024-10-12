@@ -1,16 +1,50 @@
-//? ця функція не приймає ніяких аргументів і вона потрібна для того щоб ніхто не чепав main.js 
-//? функція потрібна як обгортка для всієї логіки
-//? вся логіка знаходиться всередині
-//? ви маєте папку (для своїх JS файлів) в ній, при необхідності, можете створювати інші JS файли (залежно від завдання) і виклик тих функцій повинен бути в основній функції, тобто вы можете написати всередині цієї функції безліч інших функцій, або їх виклики
-//? якщо все зрозуміло, то можете видалити ці повідомлення
+export function header() {
+  const menu = document.querySelector('.menu-body');
+  const menuBtn = document.querySelector('.menu-icon');
+  const body = document.body;
 
-//? функціонал - зміна теми, мобільне меню
+  if (menu && menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      menuBtn.classList.toggle('active');
+      body.classList.toggle('lock');
+    });
+  }
 
-//your imports is here (if you have)
+  menu.querySelectorAll('menu-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      menuBtn.classList.remove('active');
+      body.classList.remove('lock');
+    });
+  });
 
-//
+  // scroll
 
-export function header () {
-	console.log('hello world from header');
-	// your code is here ⏬'
+  const anchors = document.querySelectorAll('a[href*="#"]');
+
+  anchors.forEach(anchor =>
+    anchor.addEventListener('click', event => {
+      event.preventDefault();
+
+      const blockID = anchor.getAttribute('href').substring(1);
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    })
+  );
+
+  // Theme
+
+  const toggleSwitch = document.getElementById('switch');
+  toggleSwitch.addEventListener('change', function () {
+    if (toggleSwitch.checked) {
+      console.log('Switch is ON');
+      body.classList.add('dark-theme');
+    } else {
+      console.log('Switch is OFF');
+      body.classList.remove('dark-theme');
+    }
+  });
 }
