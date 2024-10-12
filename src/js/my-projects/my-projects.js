@@ -1,12 +1,13 @@
 import { projectsRefs } from './project-refs';
 import { contentArr } from './content-arr';
+import { responsiveImageLayout } from './responsiveImageLayout';
 import { projectsGallery } from './gallery';
 import sprite from '../../img/sprite.svg';
 
 export function myProjects() {
   const { projectsListEl, showMoreBtnEl } = projectsRefs;
   let num = 3;
-
+  //generate markup
   const projectsMarkup = (projects, items) => {
     return projects
       .map(({ img1x, img2x, title, technologies, btnLink, id }, _, arr) =>
@@ -38,8 +39,15 @@ export function myProjects() {
     'beforeend',
     projectsMarkup(contentArr, num)
   );
+  //set image layout
+  const pictures = projectsListEl.querySelectorAll('.project-img-inner');
+  const clientWidth = projectsListEl.clientWidth;
+  responsiveImageLayout(clientWidth, pictures);
+
+  //add gallery for first 3 pictures
   projectsGallery();
 
+  //load more button settings
   const btnSpan = showMoreBtnEl.querySelector('span');
   const onClick = () => {
     btnSpan.textContent = 'LOAD MORE';
@@ -65,6 +73,8 @@ export function myProjects() {
         behavior: 'smooth',
       });
     }
+
+    //add gallery for next pictures
     projectsGallery();
   };
   showMoreBtnEl.addEventListener('click', onClick);
