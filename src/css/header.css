@@ -192,5 +192,19 @@ label:active:after {
 /* theme */
 
 body.dark-theme {
-  background-color: #2a2d32;
+  color: #f0f0f0;
+  background-color: #1e2023;
+
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #f0f0f0;
+  }
+
+  a.project-btn {
+    background-color: #2a2d32;
+  }
 }
