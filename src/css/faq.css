@@ -7,6 +7,8 @@ li {
     /* display: block; */
   }
 
+
+
   .faq__title {
     font-family: 'Impact';
     font-weight: 400;
@@ -103,7 +105,28 @@ li {
     border-top-right-radius: 16px;
   }
 
+  @media screen and (min-width: 1280px) {
+    /* Медиазапрос для высококачественных экранов (Retina) с плотностью пикселей 2 и выше */
+    @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .faq {
+        background-image: url(../img/faq/faq-bg-2x.png);
+        background-position: bottom left; /* Фон будет размещен внизу слева */
+        background-repeat: no-repeat;
+        background-size: 526px 408px;
+        background-attachment: fixed;
+        
+      }
+    }
+  }
   @media (min-width: 1280px) {
+    .faq {
+      background-image: url(../img/faq/faq-bg-1x.png);
+      background-position: bottom left; /* Фон будет размещен внизу слева */
+      background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+      background-size: 526px 408px; /* Или можно использовать размеры, чтобы отрегулировать */
+      background-attachment: fixed;
+    }
+
     .faq__title {
       display: block;
       flex: 1;
