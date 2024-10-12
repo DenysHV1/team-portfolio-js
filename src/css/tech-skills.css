@@ -37,6 +37,9 @@
 .tech-dot-hidden {
   display: none;
 }
+.tech-dot-hidden {
+  display: none;
+}
 @keyframes marqueeLine {
   from {
     transform: translateX(0);
@@ -119,6 +122,21 @@
   .tech-skills {
     padding-top: 164px;
   }
+
+  .marquee__line {
+    text-align: center;
+  }
+
+  .second_marquee__line {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .tech-dot-hidden {
+    display: inline-block;
+  }
+}
 
   .marquee__line {
     text-align: center;
