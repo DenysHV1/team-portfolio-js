@@ -68,6 +68,8 @@ export function myProjects() {
         'beforeend',
         projectsMarkup(contentArr, num)
       );
+
+      document.getElementById('my-projects').scrollIntoView({ behavior: 'smooth' });
     }
 
     //add gallery for next pictures
