@@ -85,7 +85,7 @@ export function workTogether() {
       return;
     }
 
-    emptyError.classList.add('visually-hidden'); // Приховуємо повідомлення про помилку
+    // emptyError.classList.add('visually-hidden');
 
     // Формування даних для запиту
     const formData = {
@@ -114,8 +114,8 @@ export function workTogether() {
         localStorage.removeItem('feedback-form-state'); // Очищуємо локальне сховище
       })
       .catch(error => {
-        console.error('Error:', error);
-        done.textContent = 'Failed to send the message. Please try again.';
+        // console.error('Error:', error);
+        // done.textContent = 'Failed to send the message. Please try again.';
       });
   }
 
