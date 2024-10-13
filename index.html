@@ -13,7 +13,7 @@
     <script type="module" crossorigin src="/team-portfolio-js/index.js"></script>
     <link rel="modulepreload" crossorigin href="/team-portfolio-js/assets/vendor-CMRcTFCX.js">
     <link rel="stylesheet" crossorigin href="/team-portfolio-js/assets/vendor-ChetoOMJ.css">
-    <link rel="stylesheet" crossorigin href="/team-portfolio-js/assets/index-CuG5CkQF.css">
+    <link rel="stylesheet" crossorigin href="/team-portfolio-js/assets/index-BgWLLNqV.css">
   </head>
   <body>
     <header class="header container">
@@ -454,7 +454,7 @@
   </div>
 </section>
 
-      <section id="together" class="together">
+      <section id="contacts" class="together">
   <div class="container together-container">
     <h2 class="together-title">
       let’s <span class="together-tile-span">work <br />together</span>
@@ -468,13 +468,13 @@
           <ul class="contacts-list">
             <li class="contacts-list-item">
               <svg class="" width="24" height="24">
-                <use href="../../img/sprite.svg#work-together-phone"></use>
+                <use href="/team-portfolio-js/assets/sprite-B4v8_FLq.svg#work-together-phone"></use>
               </svg>
               <a href="tel:+380904567890">+38 090 456 78 90</a>
             </li>
             <li class="contacts-list-item">
               <svg class="" width="24" height="24">
-                <use href="../../img/sprite.svg#work-together-mail"></use>
+                <use href="/team-portfolio-js/assets/sprite-B4v8_FLq.svg#work-together-mail"></use>
               </svg>
               <a href="mailto:lloydjefferson@gmail.com"
                 >lloydjefferson@gmail.com</a
@@ -482,7 +482,7 @@
             </li>
             <li class="contacts-list-item">
               <svg class="" width="24" height="24">
-                <use href="../../img/sprite.svg#work-together-location"></use>
+                <use href="/team-portfolio-js/assets/sprite-B4v8_FLq.svg#work-together-location"></use>
               </svg>
               <a
                 href="https://www.google.com/maps?q=USA,+New+York"
@@ -505,23 +505,28 @@
         <p class="form-validation-text visually-hidden">
           Invalid email, try again
         </p>
-        <textarea name="" id="" placeholder="Message"></textarea>
+        <textarea
+          name="message"
+          id="messageInput"
+          placeholder="Message"
+        ></textarea>
 
         <button class="together-btn" type="submit">SEND MESSAGE</button>
       </form>
     </div>
   </div>
-</section>
+  <div class="modal-overlay visually-hidden"></div>
 
-<!-- <div class="together-wrapper">
-  <h2 class="together-wrapper-title">
-    Thank you for your interest in cooperation!
-  </h2>
-  <p class="together-wrapper-text">
-    The manager will contact you shortly to discuss further details and
-    opportunities for cooperation. Please stay in touch.
-  </p>
-</div> -->
+  <div class="together-modal visually-hidden">
+    <h2 class="together-modal-title">
+      Thank you for your interest in cooperation!
+    </h2>
+    <p class="together-modal-text">
+      The manager will contact you shortly to discuss further details and
+      opportunities for cooperation. Please stay in touch.
+    </p>
+  </div>
+</section>
 
     </main>
 
