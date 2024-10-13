@@ -60,8 +60,6 @@ document.addEventListener('keydown', event => {
 });
 
 export async function reviews() {
-  console.log('Loading reviews...');
-
   try {
     const response = await getReview();
 

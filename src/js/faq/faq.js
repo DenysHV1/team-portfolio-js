@@ -1,5 +1,4 @@
 export function faq() {
-  console.log('hello world from faq');
   const accordionItems = document.querySelectorAll('.accordion-item');
   const firstItem = accordionItems[0];
   if (firstItem) {
