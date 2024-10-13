@@ -2,12 +2,14 @@ export function header() {
   const menu = document.querySelector('.menu-body');
   const menuBtn = document.querySelector('.menu-icon');
   const body = document.body;
+  const heroEl = document.querySelectorAll('.hero-button-container');
 
   if (menu && menuBtn) {
     menuBtn.addEventListener('click', () => {
       menu.classList.toggle('active');
       menuBtn.classList.toggle('active');
       body.classList.toggle('lock');
+      heroEl.style.display.none;
     });
   }
 

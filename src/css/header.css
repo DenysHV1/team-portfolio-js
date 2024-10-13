@@ -58,6 +58,7 @@ input {
 }
 
 /* toggle theme */
+
 input[type='checkbox'] {
   height: 0;
   width: 0;
@@ -117,6 +118,12 @@ body.dark-theme {
     background-color: #f0f0f0;
   }
   /* hero */
+  .green-block {
+    background: #14c57c;
+  }
+  .hero-social-media {
+    background: #2a2d32;
+  }
   /* tech skills */
   .marquee {
     background-color: #204136;
@@ -159,17 +166,17 @@ body.dark-theme {
   .list-item {
     background: #2a2d32;
   }
-  .icon-but {
+  .icon-but,
+  .icon-arrow-left {
     stroke: #f0f0f0;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
-    border: 1px solid #2a2d32;
+  .swiper-button-prev,
+  .swiper-button-next {
+    border: 1px solid #f0f0f0;
   }
   .button:hover:not(.button.disabled) {
     background-color: #2a2d32;
   }
-
   .button.disabled {
     border: 1px solid #2a2d32;
   }
@@ -195,23 +202,27 @@ body.dark-theme {
     width: 100%;
     background-color: #fff;
     background-image: url('/img/hero/mob-menu.png');
-    background-size: cover;
     background-position: center;
     display: flex;
     transition: all 350ms;
     overflow: auto;
-    /* transition: all 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275); */
   }
 
   .menu-body.active {
     left: 0;
+    z-index: 2;
+    .hero-button-container {
+      display: none;
+    }
+    .hero-social {
+      display: none;
+    }
   }
 
   .header-logo-menu {
     position: absolute;
     display: block;
     font-family: Impact;
-    /* ниже чем на макете */
     padding-top: 35px;
     padding-left: 20px;
     font-size: 24px;
