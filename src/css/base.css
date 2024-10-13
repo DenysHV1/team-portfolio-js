@@ -6,6 +6,7 @@ body {
   line-height: 150%;
   letter-spacing: 0.03em;
   color: #292929;
+  overflow-x: hidden;
 }
 
 html {
