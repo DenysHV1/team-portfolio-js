@@ -1,14 +1,16 @@
 .together {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 80px;
 }
 .container {
 }
 .together-container {
 }
-.together-tile {
+.together-title {
   font-weight: 400;
   font-size: 52px;
   font-family: 'Impact', sans-serif;
-  margin-top: 50px;
   margin-bottom: 40px;
   line-height: 1.23;
   letter-spacing: 0.03em;
@@ -119,16 +121,24 @@ textarea::placeholder {
   flex-direction: column;
   gap: 10px;
   border-radius: 8px;
-  padding: 12px 24px;
   width: 320px;
   height: 48px;
   background: #00b068;
   transition: 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  white-space: nowrap;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #f0f0f0;
 }
 
 .together-btn:hover,
 .together-btn:focus {
   background: #009156;
+  transform: scale(1.05);
 }
 .form-not-validation {
   display: none;
@@ -141,18 +151,32 @@ textarea::placeholder {
   letter-spacing: 0.04em;
   color: #e74a3b;
 }
+
+.input-error {
+  color: #e74a3b;
+}
+
 @media screen and (min-width: 768px) {
   .together {
+    padding-top: 124px;
+    background-image: url(../img/benefits-workTogether/benefits-bg-1x.png);
+    background-size: 336px 260px;
+    background-repeat: no-repeat;
+    background-position: 98% 6%;
+    background-attachment: local;
   }
-  .container {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .about-me-inner {
+      background-image: url(../img/benefits-workTogether/benefits-bg-2x.png);
+    }
   }
+
   .together-container {
   }
-  .together-tile {
+  .together-title {
     font-size: 108px;
     line-height: 1.15;
     letter-spacing: 0.02em;
-    margin-top: 124px;
     margin-bottom: 60px;
   }
   .together-tile-span {
@@ -186,30 +210,43 @@ textarea::placeholder {
 
 @media screen and (min-width: 1280px) {
   .together {
+    padding-top: 164px;
+    background-size: 526px 408px;
+    background-position: 96% 8%;
   }
-  .container {
+
+  .together-first {
+    display: flex;
+    gap: 136px;
   }
   .together-container {
   }
-  .together-tile {
+  .together-title {
   }
   .together-tile-span {
   }
   .together-box {
+    height: 288px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .together-text {
   }
   .contacts {
   }
   .contacts-list {
+    flex-direction: column;
   }
   .contacts-list-item {
   }
   .form-list {
   }
   .form-list input {
+    width: 592px;
   }
   .form-list textarea {
+    width: 592px;
   }
   .together-btn {
   }
