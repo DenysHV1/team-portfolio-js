@@ -218,6 +218,10 @@
     display: -webkit-inline-box;
     margin-left: 16px;
   }
+  .hero-img-men > img {
+    border-radius: 16px;
+  }
+
   .hero-btn-text {
     display: flex;
     align-items: center;
