@@ -1,1 +1,172 @@
+.about-me {
+  width: 100%;
+  padding-top: 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
 
+.about-me-inner {
+  display: flex;
+  flex-direction: column;
+}
+.about-me-title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.about-me-title > span {
+  color: #00b068;
+}
+
+.man-foto {
+  margin-top: 40px;
+}
+.portfolio-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #292929;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.about-me-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #292929;
+  margin-bottom: 24px;
+}
+.about-me-text:last-of-type {
+  margin-bottom: 0;
+}
+.about-me-list {
+  list-style: none;
+  padding-left: 18px;
+}
+.about-me-item {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #292929;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 18px;
+}
+.about-me-item:last-of-type {
+  margin-bottom: 0;
+}
+.about-me-item::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #00b068;
+  font-size: 1.2em;
+  line-height: 1;
+  transform: translateX(-12px);
+}
+@media screen and (min-width: 768px) {
+  .about-me-inner {
+    background-image: url(../img/about-me/aboutMe-bg-1x.png);
+    background-size: 336px 252px;
+    background-repeat: no-repeat;
+    background-position: 392px 852px;
+    background-attachment: local;
+  }
+
+  .about-me {
+    padding-top: 124px;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .about-me-inner {
+      background-image: url(../img/about-me/aboutMe-bg-2x.png);
+    }
+  }
+  .about-me-title {
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+  }
+  .foto-bio-tab {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .man-foto {
+    margin-top: 408px;
+  }
+  .bio-text {
+    margin-left: 32px;
+  }
+  .portfolio-title {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+  }
+  .education-role {
+    display: flex;
+  }
+  .education-role-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 336px;
+  }
+  .about-me-item {
+    margin-bottom: 16px;
+  }
+  .man-foto {
+    border-radius: 16px;
+    width: 336px;
+    height: 392px;
+  }
+  .education-role-item {
+    margin-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-me-inner {
+    background-image: url(../img/about-me/aboutMe-bg-1x.png);
+    background-size: 384px 288px;
+    background-repeat: no-repeat;
+    background-position: 864px 700px;
+    background-attachment: local;
+  }
+  .about-me {
+    padding-top: 164px;
+  }
+  .man-foto {
+    margin-top: 312px;
+  }
+  .about-me-content {
+    padding-left: 218px;
+  }
+  .foto-bio-tab {
+    margin-bottom: 40px;
+  }
+  .bio-text {
+    margin-left: 136px;
+  }
+  .education-role-item {
+    max-width: 384px;
+  }
+  .education-role-item {
+    margin-right: 136px;
+  }
+  .man-foto {
+    border-radius: 16px;
+    width: 384px;
+    height: 448px;
+  }
+}
