@@ -121,6 +121,14 @@
   fill: none;
 }
 
+.swiper-button-prev:disabled > .icon-but.icon-arrow-left {
+  stroke: #e4e5e6;
+}
+
+.swiper-button-next:disabled > .icon-arrow-right {
+  stroke: #e4e5e6;
+}
+
 .button:hover:not(.button.disabled) {
   background-color: #e4e5e6;
   color: #292929;
