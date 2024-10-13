@@ -11,14 +11,6 @@ export function header() {
     });
   }
 
-  menu.querySelectorAll('menu-link').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('active');
-      menuBtn.classList.remove('active');
-      body.classList.remove('lock');
-    });
-  });
-
   // scroll
 
   const anchors = document.querySelectorAll('a[href*="#"]');
@@ -32,6 +24,10 @@ export function header() {
         behavior: 'smooth',
         block: 'start',
       });
+
+      menu.classList.remove('active');
+      menuBtn.classList.remove('active');
+      body.classList.remove('lock');
     })
   );
 

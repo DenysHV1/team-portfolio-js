@@ -7,9 +7,9 @@
   position: relative;
 }
 
-/* body.lock {
+body.lock {
   overflow: hidden;
-} нужно на боди */
+}
 
 .header-logo {
   font-family: Impact;
@@ -96,10 +96,6 @@ input:checked + label:after {
   transform: translateX(-100%);
 }
 
-label:active:after {
-  width: 130px;
-}
-
 /* theme */
 
 body.dark-theme {
@@ -122,6 +118,19 @@ body.dark-theme {
   }
   /* hero */
   /* tech skills */
+  .marquee {
+    background-color: #204136;
+  }
+  .marquee__line {
+    color: #f0f0f0;
+  }
+  .second_marquee__line {
+    background-color: #2a2d32;
+    color: #14c57c;
+  }
+  .tech-second-dot::before {
+    background-color: #fff;
+  }
   /* projects */
   a.project-btn {
     background-color: #2a2d32;
@@ -139,7 +148,32 @@ body.dark-theme {
   }
 
   /* faq */
+  .accordion-icon {
+    stroke: #fff;
+  }
+  .accordion-content,
+  .accordion-item.expanded .accordion-header {
+    background-color: #204136;
+  }
   /* reviews */
+  .list-item {
+    background: #2a2d32;
+  }
+  .icon-but {
+    stroke: #f0f0f0;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    border: 1px solid #2a2d32;
+  }
+  .button:hover:not(.button.disabled) {
+    background-color: #2a2d32;
+  }
+
+  .button.disabled {
+    border: 1px solid #2a2d32;
+  }
+
   /* work together */
   /* footer */
 }
