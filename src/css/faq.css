@@ -110,7 +110,7 @@ li {
         background-position: calc(0% + 50px) bottom;
         background-repeat: no-repeat;
         background-size: 526px 408px;
-        background-attachment: fixed;
+        background-attachment: scroll;
         
       }
     }
@@ -121,7 +121,7 @@ li {
       background-position: calc(0% + 50px) bottom;
       background-repeat: no-repeat; 
       background-size: 526px 408px;
-      background-attachment: fixed;
+      background-attachment: scroll;
     }
 
     .faq__title {
