@@ -40,10 +40,8 @@ export function header() {
   const toggleSwitch = document.getElementById('switch');
   toggleSwitch.addEventListener('change', function () {
     if (toggleSwitch.checked) {
-      console.log('Switch is ON');
       body.classList.add('dark-theme');
     } else {
-      console.log('Switch is OFF');
       body.classList.remove('dark-theme');
     }
   });

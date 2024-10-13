@@ -32,9 +32,11 @@
 .menu-list {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 
-.menu-item {
+input {
+  display: none;
 }
 
 .menu-link {
@@ -43,6 +45,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
+  transition: color 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .menu-link:hover,
@@ -54,7 +57,97 @@
   display: none;
 }
 
+/* toggle theme */
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 48px;
+  height: 24px;
+  background: #e4e5e6;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #00b068;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #f0f0f0;
+}
+
+input:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 130px;
+}
+
+/* theme */
+
+body.dark-theme {
+  background-color: #1e2023;
+
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #f0f0f0;
+  }
+  /* header */
+  .menu-body {
+    background-color: #1e2023;
+  }
+  .menu-icon span {
+    background-color: #f0f0f0;
+  }
+  /* hero */
+  /* tech skills */
+  /* projects */
+  a.project-btn {
+    background-color: #2a2d32;
+  }
+  a.project-btn:focus,
+  a.project-btn:hover {
+    background-color: #3b3f45;
+  }
+  button.projects-btn-js span {
+    color: #f0f0f0;
+  }
+  button.projects-btn-js span:focus,
+  button.projects-btn-js span:hover {
+    color: #14c57c;
+  }
+
+  /* faq */
+  /* reviews */
+  /* work together */
+  /* footer */
+}
+
 @media screen and (max-width: 768px) {
+  label {
+    margin: 0 auto;
+  }
   .header {
     padding: 20;
   }
@@ -143,68 +236,5 @@
       transform: rotate(45deg);
       bottom: calc(50% - 1px);
     }
-  }
-}
-
-/* toggle theme */
-input[type='checkbox'] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 48px;
-  height: 24px;
-  background: #e4e5e6;
-  display: block;
-  border-radius: 100px;
-  position: relative;
-}
-
-label:after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 20px;
-  height: 20px;
-  background: #00b068;
-  border-radius: 90px;
-  transition: 0.3s;
-}
-
-input:checked + label {
-  background: #2a2d32;
-}
-
-input:checked + label:after {
-  left: calc(100% - 2px);
-  transform: translateX(-100%);
-}
-
-label:active:after {
-  width: 130px;
-}
-
-/* theme */
-
-body.dark-theme {
-  color: #f0f0f0;
-  background-color: #1e2023;
-
-  a,
-  p,
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: #f0f0f0;
-  }
-
-  a.project-btn {
-    background-color: #2a2d32;
   }
 }
