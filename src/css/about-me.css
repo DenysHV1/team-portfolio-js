@@ -124,6 +124,7 @@
   }
   .about-me-item {
     margin-bottom: 16px;
+    border: none;
   }
   .man-foto {
     border-radius: 16px;

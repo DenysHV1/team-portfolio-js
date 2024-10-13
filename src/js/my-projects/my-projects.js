@@ -68,10 +68,6 @@ export function myProjects() {
         'beforeend',
         projectsMarkup(contentArr, num)
       );
-      window.scrollTo({
-        top: '#my-projects',
-        behavior: 'smooth',
-      });
     }
 
     //add gallery for next pictures
