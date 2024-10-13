@@ -1,0 +1,154 @@
+.marquee {
+  overflow: hidden;
+  font-family: 'Pridi', sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  text-transform: uppercase;
+  background-color: #bcdfd1;
+  position: relative;
+  z-index: 1;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.marquee__inner {
+  display: flex;
+}
+.marquee__line {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  margin: 0;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  color: #292929;
+  padding: 32px 0px;
+  width: 1300px;
+  height: 104px;
+}
+
+.tech-dot-hidden {
+  display: none;
+}
+.tech-dot-hidden {
+  display: none;
+}
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.second_marquee__line {
+  transform: translateX(100%);
+  animation-name: marqueeLineSecond;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes marqueeLineSecond {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.second-marquee {
+  transform: rotate(2deg);
+  position: relative;
+  z-index: 0;
+}
+.tech-dot::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #00b068;
+  margin: 0 16px;
+  vertical-align: middle;
+  border-radius: 2px;
+  position: relative;
+  top: -4px;
+  transform: rotate(-180deg);
+  animation: rotateAnimation 5s infinite linear;
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.second_marquee__line {
+  background: #e4e5e6;
+}
+.second_marquee__line {
+  color: #00b068;
+}
+.tech-second-dot::before {
+  background-color: #292929;
+}
+.tech-wrapper {
+  position: relative;
+}
+.tech-skills {
+  padding-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .marquee__line {
+    padding: 40px 0px;
+    width: 1410px;
+    height: 128px;
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+  }
+  .tech-skills {
+    padding-top: 124px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .tech-skills {
+    padding-top: 164px;
+  }
+
+  .marquee__line {
+    text-align: center;
+  }
+
+  .second_marquee__line {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .tech-dot-hidden {
+    display: inline-block;
+  }
+}
+
+  .marquee__line {
+    text-align: center;
+  }
+
+  .second_marquee__line {
+    text-align: center;
+  }
+
+
+@media screen and (min-width: 1440px) {
+  .tech-dot-hidden {
+    display: inline-block;
+  }
+}

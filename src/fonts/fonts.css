@@ -5,7 +5,6 @@
   src: local('Impact Light'), local('impact'),
       url('impact.eot?#iefix') format('embedded-opentype'),
       url('impact.woff2') format('woff2'),
-      url('impact.woff') format('woff'),
       url('impact.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -18,7 +17,6 @@
   src: local('Poppins Light'), local('Poppins-Light'),
       url('Poppins-Light.eot?#iefix') format('embedded-opentype'),
       url('Poppins-Light.woff2') format('woff2'),
-      url('Poppins-Light.woff') format('woff'),
       url('Poppins-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -30,7 +28,6 @@
   src: local('Poppins Medium'), local('Poppins-Medium'),
       url('Poppins-Medium.eot?#iefix') format('embedded-opentype'),
       url('Poppins-Medium.woff2') format('woff2'),
-      url('Poppins-Medium.woff') format('woff'),
       url('Poppins-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -42,7 +39,6 @@
   src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
       url('Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
       url('Poppins-SemiBold.woff2') format('woff2'),
-      url('Poppins-SemiBold.woff') format('woff'),
       url('Poppins-SemiBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -55,7 +51,6 @@
   src: local('Poppins Regular'), local('Poppins-Regular'),
       url('Poppins-Regular.eot?#iefix') format('embedded-opentype'),
       url('Poppins-Regular.woff2') format('woff2'),
-      url('Poppins-Regular.woff') format('woff'),
       url('Poppins-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -68,7 +63,6 @@
   src: local('Montserrat Bold'), local('Montserrat-Bold'),
       url('Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
       url('Montserrat-Bold.woff2') format('woff2'),
-      url('Montserrat-Bold.woff') format('woff'),
       url('Montserrat-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -80,7 +74,6 @@
   src: local('Montserrat Regular'), local('Montserrat-Regular'),
       url('Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
       url('Montserrat-Regular.woff2') format('woff2'),
-      url('Montserrat-Regular.woff') format('woff'),
       url('Montserrat-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -93,7 +86,6 @@
   src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
       url('Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
       url('Montserrat-SemiBold.woff2') format('woff2'),
-      url('Montserrat-SemiBold.woff') format('woff'),
       url('Montserrat-SemiBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
