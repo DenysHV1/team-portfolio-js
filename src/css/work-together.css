@@ -160,7 +160,7 @@ textarea::placeholder {
   .together-box {
   }
   .together-text {
-    -webkit-line-clamp: 2; /* Фіксуємо 2 рядки */
+    /* -webkit-line-clamp: 2;  */
     width: 490px;
   }
   .contacts {
