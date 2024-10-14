@@ -101,7 +101,10 @@
   }
   .foto-bio-tab {
     display: flex;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+  }
+  .education-role {
+    margin-top: 20px;
   }
   .man-foto {
     margin-top: 408px;
@@ -153,7 +156,7 @@
     padding-left: 218px;
   }
   .foto-bio-tab {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
   }
   .bio-text {
     margin-left: 136px;
@@ -168,5 +171,8 @@
     border-radius: 16px;
     width: 384px;
     height: 448px;
+  }
+  .education-role {
+    margin-top: 40px;
   }
 }
