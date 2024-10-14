@@ -37,37 +37,22 @@
           </ul>
         </div>
       </div>
-
       <form class="form-list">
         <input
           type="email"
+          name="email"
           placeholder="Your email*"
           id="emailInput"
           pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-          required
         />
-        <p class="form-validation-text visually-hidden">
-          Invalid email, try again
-        </p>
         <textarea
           name="message"
           id="messageInput"
           placeholder="Message"
         ></textarea>
-
         <button class="together-btn" type="submit">SEND MESSAGE</button>
       </form>
     </div>
   </div>
   <div class="modal-overlay visually-hidden"></div>
-
-  <div class="together-modal visually-hidden">
-    <h2 class="together-modal-title">
-      Thank you for your interest in cooperation!
-    </h2>
-    <p class="together-modal-text">
-      The manager will contact you shortly to discuss further details and
-      opportunities for cooperation. Please stay in touch.
-    </p>
-  </div>
 </section>
