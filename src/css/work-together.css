@@ -136,6 +136,7 @@ textarea::placeholder {
 .form-not-validation {
   display: none;
 }
+
 .form-validation-text {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -177,36 +178,36 @@ textarea::placeholder {
   z-index: 999;
 }
 
-.together-modal-title{
+.together-modal-title {
   min-width: 256px;
-  font-family: "Poppins", sans-serif;
-font-weight: 400;
-font-size: 20px;
-line-height: 160%;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-text-align: center;
-color: #00b068;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00b068;
 }
 
-.together-modal-text{
+.together-modal-text {
   min-width: 256px;
-  font-family: "Poppins", sans-serif;
-font-weight: 300;
-font-size: 16px;
-line-height: 150%;
-letter-spacing: 0.03em;
-text-align: center;
-color: #292929;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #292929;
 }
 
-.modal-close-button{
+.modal-close-button {
   position: absolute;
   right: 20px;
   top: 20px;
 }
 
-.close-modal-svg{
+.close-modal-svg {
   stroke: #292929;
   fill: #292929;
 }
@@ -258,15 +259,14 @@ color: #292929;
     padding: 64px;
     border-radius: 16px;
   }
-  
-  .together-modal-title{
+
+  .together-modal-title {
     min-width: 364px;
   }
-  
-  .together-modal-text{
+
+  .together-modal-text {
     min-width: 364px;
   }
-  
 }
 
 @media screen and (min-width: 1280px) {
@@ -298,19 +298,18 @@ color: #292929;
     width: 592px;
   }
 
-  
   .together-modal {
     max-width: 492px;
     max-height: 280px;
     padding: 64px;
     border-radius: 16px;
   }
-  
-  .together-modal-title{
+
+  .together-modal-title {
     min-width: 364px;
   }
-  
-  .together-modal-text{
+
+  .together-modal-text {
     min-width: 364px;
   }
 }
