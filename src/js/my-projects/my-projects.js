@@ -41,12 +41,11 @@ export function myProjects() {
   );
   //set image layout
   const pictures = projectsListEl.querySelectorAll('.project-img-inner');
-  
-setInterval(() => {
-  const clientWidth = projectsListEl.clientWidth;
-  responsiveImageLayout(clientWidth, pictures);
-},1000)
 
+  setInterval(() => {
+    const clientWidth = projectsListEl.clientWidth;
+    responsiveImageLayout(clientWidth, pictures);
+  }, 100);
 
   //add gallery for first 3 pictures
   projectsGallery();
@@ -62,6 +61,7 @@ setInterval(() => {
         'beforeend',
         projectsMarkup(contentArr, num)
       );
+      responsiveImageLayout(projectsListEl.clientWidth, pictures);
       if (projectsListEl.children.length >= contentArr.length) {
         btnSpan.textContent = 'hide';
       }
@@ -72,7 +72,6 @@ setInterval(() => {
         'beforeend',
         projectsMarkup(contentArr, num)
       );
-
       document
         .getElementById('my-projects')
         .scrollIntoView({ behavior: 'smooth' });
