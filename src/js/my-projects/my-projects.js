@@ -41,8 +41,12 @@ export function myProjects() {
   );
   //set image layout
   const pictures = projectsListEl.querySelectorAll('.project-img-inner');
+  
+setInterval(() => {
   const clientWidth = projectsListEl.clientWidth;
   responsiveImageLayout(clientWidth, pictures);
+},1000)
+
 
   //add gallery for first 3 pictures
   projectsGallery();
@@ -69,7 +73,9 @@ export function myProjects() {
         projectsMarkup(contentArr, num)
       );
 
-      document.getElementById('my-projects').scrollIntoView({ behavior: 'smooth' });
+      document
+        .getElementById('my-projects')
+        .scrollIntoView({ behavior: 'smooth' });
     }
 
     //add gallery for next pictures
