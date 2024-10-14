@@ -7,7 +7,7 @@ import { showModal } from './messageMarkup';
 import { localStorageFn } from './localStorage';
 
 export function workTogether() {
-  const { form, inputEmail, messageInput, error, modalOverlay } = refs;
+  const { form, inputEmail, messageInput, modalOverlay } = refs;
 
   form.addEventListener('submit', oneClickSend);
 
@@ -19,8 +19,15 @@ export function workTogether() {
 
     // Перевірка на порожні поля
     if (!email || !message) {
-      error.textContent = 'Please fill in all fields';
-      error.classList.remove('visually-hidden');
+      iziToast.error({
+        title: 'Error',
+        message: 'Please fill in all fields',
+        position: 'topRight',
+        timeout: 5000,
+        backgroundColor: '#FF4D4D',
+        color: '#FFFFFF',
+        zindex: 9999,
+      });
       return;
     }
 
@@ -35,8 +42,10 @@ export function workTogether() {
       if (response) {
         showModal(response.title, response.message, modalOverlay);
 
-        error.textContent = '';
-        error.classList.add('visually-hidden');
+        const closeButton = document.querySelector('.modal-close-button');
+        closeButton.addEventListener('click', () => {
+          modalOverlay.classList.add('visually-hidden');
+        });
 
         form.reset();
         localStorage.removeItem('feedback-form-state');
@@ -52,11 +61,6 @@ export function workTogether() {
         zindex: 9999,
       });
     }
-
-    const closeButton = document.querySelector('.modal-close-button');
-    closeButton.addEventListener('click', () => {
-      modalOverlay.classList.add('visually-hidden');
-    });
   }
 
   localStorageFn(inputEmail, messageInput);
