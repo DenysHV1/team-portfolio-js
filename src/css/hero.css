@@ -20,21 +20,10 @@
     background-image: url(../img/hero/hero-360-top-2x.png);
   }
 }
-/* 
-.hero-bg-top{
-    /* background-image: url(../img/hero/hero-768-top-1x.png);
-    background-size: 351px 264px;
-    background-repeat: no-repeat;
-    background-position: 39% 1%; 
-}*/
 
 .hero-inner {
   display: flex;
   flex-direction: column;
-  /* background-image: url(../img/hero/hero-768-bottom-1x.png);
-  background-size: 170px 131px;
-  background-repeat: no-repeat;
-  background-position: 105% 82.5%; */
 }
 
 .hero-title {
@@ -78,7 +67,7 @@
 .hero_svg {
   stroke: #00b068;
   fill: #00b068;
-  margin-right: 12px;
+  margin-right: 3px;
 }
 
 .green-block {
@@ -158,6 +147,12 @@ transition: color 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 .hero_link:active{
   color: #00b068;
+}
+
+@media screen and (min-width: 360px) {
+  .hero_svg {
+    margin-right: 12px;
+  }
 }
 
 /*---Media-768---*/

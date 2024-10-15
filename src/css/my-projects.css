@@ -146,6 +146,12 @@
   height: 14.5px;
 }
 
+.project-img-inner {
+  object-fit: cover;
+  width: 320px;
+  height: 184px;
+}
+
 @media screen and (min-width: 768px) {
   .my-projects {
     padding-top: 124px;
@@ -184,6 +190,12 @@
     justify-content: space-between;
     width: 100%;
   }
+
+  .project-img-inner {
+    object-fit: cover;
+    width: 704px;
+    height: 404px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -214,6 +226,7 @@
 
   .project-img-inner {
     object-fit: cover;
-    width: 100%;
+    width: 1008px;
+    height: 580px;
   }
 }

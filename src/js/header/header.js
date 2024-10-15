@@ -35,12 +35,22 @@ export function header() {
 
   // Theme
 
+  window.addEventListener('load', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-theme');
+      toggleSwitch.checked = true;
+    }
+  });
+
   const toggleSwitch = document.getElementById('switch');
   toggleSwitch.addEventListener('change', function () {
     if (toggleSwitch.checked) {
       body.classList.add('dark-theme');
+      localStorage.setItem('theme', 'dark');
     } else {
       body.classList.remove('dark-theme');
+      localStorage.setItem('theme', 'light');
     }
   });
 }
