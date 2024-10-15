@@ -1,6 +1,6 @@
 import { projectsRefs } from './project-refs';
 import { contentArr } from './content-arr';
-import { responsiveImageLayout } from './responsiveImageLayout';
+
 import { projectsGallery } from './gallery';
 import sprite from '../../img/sprite.svg';
 
@@ -41,12 +41,6 @@ export function myProjects() {
   );
   //set image layout
   const pictures = projectsListEl.querySelectorAll('.project-img-inner');
-  
-setInterval(() => {
-  const clientWidth = projectsListEl.clientWidth;
-  responsiveImageLayout(clientWidth, pictures);
-},1000)
-
 
   //add gallery for first 3 pictures
   projectsGallery();
@@ -72,7 +66,6 @@ setInterval(() => {
         'beforeend',
         projectsMarkup(contentArr, num)
       );
-
       document
         .getElementById('my-projects')
         .scrollIntoView({ behavior: 'smooth' });

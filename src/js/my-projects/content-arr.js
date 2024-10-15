@@ -36,6 +36,7 @@ export const contentArr = [
     technologies: 'React, JavaScript, Node JS, Git',
     btnLink: '#',
     id: 1,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project2and1x,
@@ -43,6 +44,7 @@ export const contentArr = [
     title: 'Green harvest webservice',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 2,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project3and1x,
@@ -50,6 +52,7 @@ export const contentArr = [
     title: 'English Exellence webservice',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 3,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project4and1x,
@@ -57,6 +60,7 @@ export const contentArr = [
     title: 'power pulse webservice',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 4,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project5and1x,
@@ -64,6 +68,7 @@ export const contentArr = [
     title: 'mimino website',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 5,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project6and1x,
@@ -71,6 +76,7 @@ export const contentArr = [
     title: 'vyshyvanka vibes Landing Page',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 6,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project7and1x,
@@ -78,6 +84,7 @@ export const contentArr = [
     title: 'chego jewelry website',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 7,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project8and1x,
@@ -85,6 +92,7 @@ export const contentArr = [
     title: 'energy flow webservice',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 8,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project9and1x,
@@ -92,6 +100,7 @@ export const contentArr = [
     title: 'fruitbox online store',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 9,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
   {
     img1x: project10and1x,
@@ -99,5 +108,6 @@ export const contentArr = [
     title: 'starlight studio landing page',
     technologies: 'React, JavaScript, Node JS, Git',
     id: 10,
+    btnLink: 'https://github.com/DenysHV1/team-portfolio-js',
   },
 ];
