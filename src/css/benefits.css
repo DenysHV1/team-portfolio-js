@@ -15,6 +15,7 @@
     letter-spacing: 0.035em;
     text-transform: uppercase;
     margin-bottom: 40px;
+    max-width: 320px;
   }
   
   .benefits-span {
@@ -85,6 +86,7 @@
       line-height: 1.15;
       letter-spacing: 0.017em;
       margin-bottom: 0;
+      max-width: 704px;
     }
   
     .benefits-subtitle {
@@ -97,6 +99,7 @@
       font-size: 16px;
       line-height: 1.5;
       letter-spacing: 0.031em;
+      max-width: 336px;
     }
   
     .benefits-list {
@@ -146,7 +149,11 @@
     }
   
     .benefits-title {
-      width: 683px;
+      max-width: 681px;
+    }
+
+    .benefits-text {
+      max-width: 384px;
     }
   
     .benefits-list {
@@ -169,20 +176,6 @@
 @media screen and (max-width: 360px) {
     .benefits {
       padding-top: 20px;
-    }
-  
-    .benefits-title {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-  
-    .benefits-subtitle {
-      font-size: 14px;
-    }
-  
-    .benefits-text {
-      font-size: 12px;
-      max-width: 220px;
     }
   
     .benefits-list {
