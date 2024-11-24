@@ -87,9 +87,6 @@
     background-attachment: local;
   }
 
-  .about-me {
-    padding-top: 124px;
-  }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .about-me-inner {
       background-image: url(../img/about-me/aboutMe-bg-2x.png);
@@ -104,12 +101,7 @@
     display: flex;
     margin-bottom: 20px;
   }
-  .man-foto {
-    margin-top: 408px;
-  }
-  .bio-text {
-    margin-left: 32px;
-  }
+
   .portfolio-title {
     font-size: 36px;
     line-height: 133%;
@@ -132,9 +124,7 @@
     width: 336px;
     height: 392px;
   }
-  .education-role-item {
-    margin-right: 32px;
-  }
+
 }
 
 @media screen and (min-width: 1280px) {
@@ -144,27 +134,6 @@
     background-repeat: no-repeat;
     background-position: 864px 700px;
     background-attachment: local;
-  }
-  .about-me {
-    padding-top: 164px;
-  }
-  .man-foto {
-    margin-top: 312px;
-  }
-  .about-me-content {
-    padding-left: 218px;
-  }
-  .foto-bio-tab {
-    margin-bottom: 40px;
-  }
-  .bio-text {
-    margin-left: 136px;
-  }
-  .education-role-item {
-    max-width: 384px;
-  }
-  .education-role-item {
-    margin-right: 136px;
   }
   .man-foto {
     border-radius: 16px;
